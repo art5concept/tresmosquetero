@@ -37,11 +37,11 @@
             iconpic = new PictureBox();
             txtPrimerApellido = new TextBox();
             label4 = new Label();
-            buttonIcon = new Button();
-            buttonAgregar = new Button();
-            buttonModificar = new Button();
-            buttonBorrar = new Button();
-            buttonCancelar = new Button();
+            btnExaminar = new Button();
+            btnAgregar = new Button();
+            btnModificar = new Button();
+            btnBorrar = new Button();
+            btnCancelar = new Button();
             datagrid_Empleados = new DataGridView();
             textSegundoApellido = new TextBox();
             label5 = new Label();
@@ -124,50 +124,50 @@
             label4.TabIndex = 8;
             label4.Text = "Segundo apellido:";
             // 
-            // buttonIcon
+            // btnExaminar
             // 
-            buttonIcon.Location = new Point(12, 217);
-            buttonIcon.Name = "buttonIcon";
-            buttonIcon.Size = new Size(167, 23);
-            buttonIcon.TabIndex = 9;
-            buttonIcon.Text = "Examinar";
-            buttonIcon.UseVisualStyleBackColor = true;
+            btnExaminar.Location = new Point(12, 217);
+            btnExaminar.Name = "btnExaminar";
+            btnExaminar.Size = new Size(167, 23);
+            btnExaminar.TabIndex = 9;
+            btnExaminar.Text = "Examinar";
+            btnExaminar.UseVisualStyleBackColor = true;
             // 
-            // buttonAgregar
+            // btnAgregar
             // 
-            buttonAgregar.Location = new Point(202, 217);
-            buttonAgregar.Name = "buttonAgregar";
-            buttonAgregar.Size = new Size(75, 23);
-            buttonAgregar.TabIndex = 10;
-            buttonAgregar.Text = "Agregar";
-            buttonAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Location = new Point(202, 217);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(75, 23);
+            btnAgregar.TabIndex = 10;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // buttonModificar
+            // btnModificar
             // 
-            buttonModificar.Location = new Point(314, 217);
-            buttonModificar.Name = "buttonModificar";
-            buttonModificar.Size = new Size(75, 23);
-            buttonModificar.TabIndex = 11;
-            buttonModificar.Text = "Editar";
-            buttonModificar.UseVisualStyleBackColor = true;
+            btnModificar.Location = new Point(314, 217);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(75, 23);
+            btnModificar.TabIndex = 11;
+            btnModificar.Text = "Editar";
+            btnModificar.UseVisualStyleBackColor = true;
             // 
-            // buttonBorrar
+            // btnBorrar
             // 
-            buttonBorrar.Location = new Point(416, 217);
-            buttonBorrar.Name = "buttonBorrar";
-            buttonBorrar.Size = new Size(75, 23);
-            buttonBorrar.TabIndex = 12;
-            buttonBorrar.Text = "Eliminar";
-            buttonBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.Location = new Point(416, 217);
+            btnBorrar.Name = "btnBorrar";
+            btnBorrar.Size = new Size(75, 23);
+            btnBorrar.TabIndex = 12;
+            btnBorrar.Text = "Eliminar";
+            btnBorrar.UseVisualStyleBackColor = true;
             // 
-            // buttonCancelar
+            // btnCancelar
             // 
-            buttonCancelar.Location = new Point(531, 217);
-            buttonCancelar.Name = "buttonCancelar";
-            buttonCancelar.Size = new Size(75, 23);
-            buttonCancelar.TabIndex = 13;
-            buttonCancelar.Text = "Cancelar";
-            buttonCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Location = new Point(531, 217);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.TabIndex = 13;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
             // 
             // datagrid_Empleados
             // 
@@ -219,11 +219,11 @@
             Controls.Add(label5);
             Controls.Add(textSegundoApellido);
             Controls.Add(datagrid_Empleados);
-            Controls.Add(buttonCancelar);
-            Controls.Add(buttonBorrar);
-            Controls.Add(buttonModificar);
-            Controls.Add(buttonAgregar);
-            Controls.Add(buttonIcon);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnBorrar);
+            Controls.Add(btnModificar);
+            Controls.Add(btnAgregar);
+            Controls.Add(btnExaminar);
             Controls.Add(label4);
             Controls.Add(txtPrimerApellido);
             Controls.Add(iconpic);
@@ -252,11 +252,11 @@
         private PictureBox iconpic;
         private TextBox txtPrimerApellido;
         private Label label4;
-        private Button buttonIcon;
-        private Button buttonAgregar;
-        private Button buttonModificar;
-        private Button buttonBorrar;
-        private Button buttonCancelar;
+        private Button btnExaminar;
+        private Button btnAgregar;
+        private Button btnModificar;
+        private Button btnBorrar;
+        private Button btnCancelar;
         private DataGridView datagrid_Empleados;
         private TextBox textSegundoApellido;
         private Label label5;

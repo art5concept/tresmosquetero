@@ -27,10 +27,11 @@ namespace tresmosquetero.capa_presentacion
             RecolectarInformacion();
 
             ConexionDatos Conectar = new ConexionDatos();
-            if (Conectar.PruebaConexion())
-            {
-                MessageBox.Show("Todo conectado...");
-            }
+            
+            MessageBox.Show("Todo conectado..." + Conectar.PruebaConexion());
+
+           
+      
 
 
         }

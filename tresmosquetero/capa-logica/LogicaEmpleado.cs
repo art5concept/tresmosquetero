@@ -4,7 +4,7 @@ using System.Text;
 
 namespace tresmosquetero.capa_logica
 {
-    internal class LogicaEmpleado
+    class LogicaEmpleado
     {
         public int ID { get; set; }
         public string NombreEmpleado { get; set; }
@@ -12,7 +12,7 @@ namespace tresmosquetero.capa_logica
         public string SegundoApellido { get; set; }
         public int Departamento { get; set; }
         public string CorreoElectronico { get; set; }
-        public required byte[] FotoEmpleado { get; set; }
+        public byte[] FotoEmpleado { get; set; }
     }
 }
 

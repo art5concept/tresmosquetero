@@ -4,7 +4,7 @@ using System.Text;
 
 namespace tresmosquetero.capa_logica
 {
-    internal class LogicaDepartamento
+    class LogicaDepartamento
     {
         public int ID { get; set; }
         public string? Departamento { get; set; }

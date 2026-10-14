@@ -100,6 +100,7 @@
             buttonDepaBorrar.TabIndex = 6;
             buttonDepaBorrar.Text = "Eliminar";
             buttonDepaBorrar.UseVisualStyleBackColor = true;
+            buttonDepaBorrar.Click += buttonDepaBorrar_Click;
             // 
             // buttonDepaCancelar
             // 
@@ -117,6 +118,7 @@
             dataGridDepartamento.Name = "dataGridDepartamento";
             dataGridDepartamento.Size = new Size(406, 174);
             dataGridDepartamento.TabIndex = 8;
+            dataGridDepartamento.CellMouseClick += dataGridDepartamento_CellMouseClick;
             // 
             // formDepartamento
             // 

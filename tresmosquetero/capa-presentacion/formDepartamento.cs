@@ -13,30 +13,30 @@ namespace tresmosquetero.capa_presentacion
 {
     public partial class formDepartamento : Form
     {
+        DepartamentosDatos OdepartamentoDatos;
+
+
+
+        // metodo constructor del formulario
         public formDepartamento()
         {
+            OdepartamentoDatos = new DepartamentosDatos();
             InitializeComponent();
+            dataGridDepartamento.DataSource = OdepartamentoDatos.MostrarDep().Tables[0];
         }
 
 
         private void buttonDepAgregar_Click(object sender, EventArgs e)
         {
-            //recolectar informacion del formulario
 
-     
-            RecolectarInformacion();
+            MessageBox.Show("Todo conectado...");
 
-            ConexionDatos Conectar = new ConexionDatos();
-            
-            MessageBox.Show("Todo conectado..." + Conectar.PruebaConexion());
-
-           
-      
-
+            // Recolectar la información del formulario y agregarla a la base de datos
+            OdepartamentoDatos.Agregar(RecolectarInformacion());
 
         }
 
-        private void RecolectarInformacion()
+        private LogicaDepartamento RecolectarInformacion()
         {
 
             LogicaDepartamento Odepartamento = new LogicaDepartamento();
@@ -45,13 +45,26 @@ namespace tresmosquetero.capa_presentacion
             Odepartamento.ID = ID;
             Odepartamento.Departamento = txtDepa.Text;
 
-            MessageBox.Show(Odepartamento.ID.ToString());
-            MessageBox.Show(Odepartamento.Departamento);
+            return Odepartamento;
 
         }
 
         private void txtIDDepa_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridDepartamento_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int indice = e.RowIndex;
+            txtIDDepa.Text = dataGridDepartamento.Rows[indice].Cells[0].Value.ToString();
+            txtDepa.Text = dataGridDepartamento.Rows[indice].Cells[1].Value.ToString();
+        }
+
+        private void buttonDepaBorrar_Click(object sender, EventArgs e)
+        {
+            OdepartamentoDatos.Eliminar(RecolectarInformacion());
+            dataGridDepartamento.DataSource = OdepartamentoDatos.MostrarDep().Tables[0];
 
         }
     }

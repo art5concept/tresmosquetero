@@ -19,13 +19,15 @@ namespace tresmosquetero.capa_datos
             return this.Conexion;
         }
 
-        public bool PruebaConexion()
+
+        /*Ejecutar comando sin retorno de datos*/ 
+        public bool ConexionSinRetornoDatos(string strComando)
         {
             try
             {
 
                 SqlCommand Comando = new SqlCommand();
-                Comando.CommandText = "INSERT INTO Departamentos (departamentos) VALUES ('secretaria')";
+                Comando.CommandText = strComando;
                 Comando.Connection = this.EnlazarConexion();
                 Conexion.Open();
                 Comando.ExecuteNonQuery();
@@ -44,10 +46,42 @@ namespace tresmosquetero.capa_datos
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
+
+
+            // Comandos para el retorno de datos
+
+
+        }
+
+        /*Ejecutar comando con retorno de datos*/
+
+        public DataSet EjecutarSentencia(SqlCommand sqlComando)
+        {
+            DataSet dataSet = new DataSet();
+            SqlDataAdapter Adaptador = new SqlDataAdapter();
+
+            try
+            {
+                SqlCommand Comando = new SqlCommand();
+                Comando = sqlComando;
+                Comando.Connection = EnlazarConexion();
+                Adaptador.SelectCommand = Comando;
+                Conexion.Open();
+                Adaptador.Fill(dataSet);
+                Conexion.Close();
+                return dataSet;
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción según sea necesario
+                Console.WriteLine($"Error al ejecutar la sentencia: {ex.Message}");
+            }
+            return dataSet;
+
         }
     }
 }

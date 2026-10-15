@@ -53,6 +53,7 @@
             // 
             txtIDDepa.Location = new Point(23, 45);
             txtIDDepa.Name = "txtIDDepa";
+            txtIDDepa.ReadOnly = true;
             txtIDDepa.Size = new Size(107, 23);
             txtIDDepa.TabIndex = 1;
             txtIDDepa.TextChanged += txtIDDepa_TextChanged;
@@ -75,44 +76,57 @@
             // 
             // buttonDepAgregar
             // 
-            buttonDepAgregar.Location = new Point(25, 87);
+            buttonDepAgregar.Image = Properties.Resources.guardar_el_archivo;
+            buttonDepAgregar.Location = new Point(129, 87);
             buttonDepAgregar.Name = "buttonDepAgregar";
-            buttonDepAgregar.Size = new Size(75, 23);
+            buttonDepAgregar.Size = new Size(91, 35);
             buttonDepAgregar.TabIndex = 4;
             buttonDepAgregar.Text = "Agregar";
+            buttonDepAgregar.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonDepAgregar.UseVisualStyleBackColor = true;
             buttonDepAgregar.Click += buttonDepAgregar_Click;
             // 
             // buttonDepaModificar
             // 
-            buttonDepaModificar.Location = new Point(138, 87);
+            buttonDepaModificar.Enabled = false;
+            buttonDepaModificar.Image = Properties.Resources.editar_documento;
+            buttonDepaModificar.Location = new Point(235, 87);
             buttonDepaModificar.Name = "buttonDepaModificar";
-            buttonDepaModificar.Size = new Size(75, 23);
+            buttonDepaModificar.Size = new Size(91, 35);
             buttonDepaModificar.TabIndex = 5;
             buttonDepaModificar.Text = "Editar";
+            buttonDepaModificar.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonDepaModificar.UseVisualStyleBackColor = true;
+            buttonDepaModificar.Click += buttonDepaModificar_Click;
             // 
             // buttonDepaBorrar
             // 
-            buttonDepaBorrar.Location = new Point(236, 87);
+            buttonDepaBorrar.Image = Properties.Resources.borrar;
+            buttonDepaBorrar.Location = new Point(338, 87);
             buttonDepaBorrar.Name = "buttonDepaBorrar";
-            buttonDepaBorrar.Size = new Size(75, 23);
+            buttonDepaBorrar.Size = new Size(91, 35);
             buttonDepaBorrar.TabIndex = 6;
             buttonDepaBorrar.Text = "Eliminar";
+            buttonDepaBorrar.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonDepaBorrar.UseVisualStyleBackColor = true;
             buttonDepaBorrar.Click += buttonDepaBorrar_Click;
             // 
             // buttonDepaCancelar
             // 
-            buttonDepaCancelar.Location = new Point(335, 87);
+            buttonDepaCancelar.Image = Properties.Resources.pagina_en_blanco;
+            buttonDepaCancelar.Location = new Point(23, 87);
             buttonDepaCancelar.Name = "buttonDepaCancelar";
-            buttonDepaCancelar.Size = new Size(75, 23);
+            buttonDepaCancelar.Size = new Size(91, 35);
             buttonDepaCancelar.TabIndex = 7;
             buttonDepaCancelar.Text = "Cancelar";
+            buttonDepaCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonDepaCancelar.UseVisualStyleBackColor = true;
+            buttonDepaCancelar.Click += buttonDepaCancelar_Click;
             // 
             // dataGridDepartamento
             // 
+            dataGridDepartamento.AllowUserToAddRows = false;
+            dataGridDepartamento.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridDepartamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridDepartamento.Location = new Point(23, 136);
             dataGridDepartamento.Name = "dataGridDepartamento";

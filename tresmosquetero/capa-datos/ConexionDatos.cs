@@ -20,7 +20,7 @@ namespace tresmosquetero.capa_datos
         }
 
 
-        /*Ejecutar comando sin retorno de datos*/ 
+        /*Ejecutar comando sin retorno de datos*/
         public bool ConexionSinRetornoDatos(string strComando)
         {
             try
@@ -50,11 +50,39 @@ namespace tresmosquetero.capa_datos
             {
                 return false;
             }
+        }
+
+            // Sobrecarga IDU
+
+        public bool ConexionSinRetornoDatos(SqlCommand SQLComando)
+        {
+            try
+            {
+
+                SqlCommand Comando = SQLComando;
+             
+                Comando.Connection = this.EnlazarConexion();
+                Conexion.Open();
+                Comando.ExecuteNonQuery();
+                Conexion.Close();
 
 
-            // Comandos para el retorno de datos
+                //using (SqlConnection conexonTemp = EnlazarConexion())
+                //{
+                //    conexonTemp.Open();
 
+                //    using (SqlCommand Comando = new SqlCommand("SELECT COUNT(*) FROM Departamentos", conexonTemp))
+                //    {
+                //        Comando.ExecuteScalar(); // Ejecuta la consulta de forma ligera
+                //    }
+                //}
 
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         /*Ejecutar comando con retorno de datos*/

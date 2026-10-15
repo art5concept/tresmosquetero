@@ -1,6 +1,7 @@
 using System.Data.SqlClient; //Espacio de nombres para SQL Server
+using tresmosquetero.capa_presentacion; 
 
-    namespace tresmosquetero
+namespace tresmosquetero
 {
     public partial class Form1 : Form
     {
@@ -17,6 +18,13 @@ using System.Data.SqlClient; //Espacio de nombres para SQL Server
 
         private void b_jugadores_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void b_departamento_Click(object sender, EventArgs e)
+        {
+            formDepartamento formDepartamento = new formDepartamento();
+            formDepartamento.ShowDialog();
 
         }
     }

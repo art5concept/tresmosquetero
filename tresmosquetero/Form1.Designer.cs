@@ -51,6 +51,7 @@
             b_departamento.TabIndex = 1;
             b_departamento.Text = "Departamentos";
             b_departamento.UseVisualStyleBackColor = true;
+            b_departamento.Click += b_departamento_Click;
             // 
             // Form1
             // 
